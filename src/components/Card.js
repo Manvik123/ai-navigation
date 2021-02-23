@@ -1,6 +1,6 @@
 import React from "react"
 import style from "../style.css"
-import PB1 from "../PB1.jpg"
+
 function Card(props){
     return(
         <div class="col-md-4">

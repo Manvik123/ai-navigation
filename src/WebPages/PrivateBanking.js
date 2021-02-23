@@ -2,12 +2,12 @@ import React from "react"
 import style from '../style.css'
 import App from '../App.scss'
 import Card2 from "../components/Card2"
-import PB1 from "../PB1.jpg"
-import PB2 from "../PB2.jpg"
-import PB3 from "../PB3.jpg"
-import PB4 from "../PB4.jpg"
-import PB5 from "../PB5.jpg"
-import PB6 from "../PB6.jpg"
+import PB1 from "../assets/PB1.jpg"
+import PB2 from "../assets/PB2.jpg"
+import PB3 from "../assets/PB3.jpg"
+import PB4 from "../assets/PB4.jpg"
+import PB5 from "../assets/PB5.jpg"
+import PB6 from "../assets/PB6.jpg"
 
 function PrivateBanking(){
     return(

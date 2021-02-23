@@ -1,6 +1,6 @@
 import React from "react"
 import style from "../style.css"
-import logo from "../DB.jpg"
+import logo from "../assets/DB.jpg"
 import{Nav,Navbar,NavDropdown,Button,Form,FormControl} from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 function Header()

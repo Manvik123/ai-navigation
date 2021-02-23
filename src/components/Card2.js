@@ -1,6 +1,6 @@
 import React from "react"
 import App from '../App.scss'
-import DB1 from '../PB1.jpg'
+
 function Card2(props){
     return(
         <div class="container">
