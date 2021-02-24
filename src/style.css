@@ -147,3 +147,32 @@
 .dropdown:hover .dropdown-menu {
   display: block;
 }
+.bg-color-home {
+  background-color: blanchedalmond;
+}
+.recomender {
+  margin-top: 40px;
+  height: 200px;
+}
+.card-imghome {
+  width: auto;
+  height: 500px;
+  object-fit: cover;
+  background: #475d62 url("./assets/home.jpg");
+}
+.card-col {
+  margin-top: 40px;
+}
+.card-home {
+  padding: 0px;
+  margin: 0px;
+}
+.card-size {
+  height: 200px;
+  align-content: center;
+  width: 250px;
+}
+.button {
+  overflow: hidden;
+  text-align: left;
+}

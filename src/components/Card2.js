@@ -3,7 +3,7 @@ import App from '../App.scss'
 
 function Card2(props){
     return(
-        <div class="container">
+ <div class="container" >    
   <div class="row align-middle">
     <div class="col-md-6 col-lg-4 column">
       <div class="card "><img  class="img" src={props.imgsrc}/>
