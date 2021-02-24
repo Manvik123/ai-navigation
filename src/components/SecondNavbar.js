@@ -13,25 +13,30 @@ function SecondNavbar()
            
                     
              <ul class="navbar-nav align-items-center ">
-                <li className="nav-item nav-link " 
-                    href="#">About Us 
-                </li>
+                <li >
+                
+                    <Nav.Link href="/aboutUs">About Us </Nav.Link>
+                </li> 
+                
                
                 <li >
                 
                     <Nav.Link href="/privateBanking">Private Banking </Nav.Link>
                 </li> 
                 
-                <li className="nav-item nav-link" 
-                    href="#">Advantage Banking
-                </li> 
+                <li >
                 
-                <li className="nav-item nav-link" 
-                    href="#">Loans
+                    <Nav.Link href="/advantageBanking">Advantage Banking </Nav.Link>
                 </li> 
-               
-                <li className="nav-item nav-link" 
-                    href="#">Investment
+
+                <li >
+                
+                    <Nav.Link href="/loans">Loans </Nav.Link>
+                </li> 
+
+                <li >
+                
+                    <Nav.Link href="/investment">Investment </Nav.Link>
                 </li> 
                
                 <li className="nav-item nav-link" 
