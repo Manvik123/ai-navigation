@@ -8,6 +8,8 @@ import Recommender from './components/Recommender'
 import ModalF from './components/Modal'
 import Home1 from "./assets/Home1.jpg";
 import Card4 from "./components/Card4";
+import { useSpeechSynthesis } from 'react-speech-kit';
+
 
 function Home(){
     const [modalOpen, setModalOpen] = React.useState(false);
@@ -16,6 +18,10 @@ function Home(){
         setModalOpen(!modalOpen)
 
      }, []);
+
+    // const value = {"option 1 Retail Banking option 2 Private Banking option 3 Loans"};
+    // const [value, setValue] = React.useState('');
+    const { speak } = useSpeechSynthesis();
     return(
         
         <div className="card-imghome">
@@ -29,7 +35,7 @@ function Home(){
             <div className="col-md-3" style={{textAlign:'center'}}>
             < br />
             <br />
-            <button type="button" class="btn btn-info float-center" >Voice Navigation</button>
+            <button type="button" class="btn btn-info float-center" onClick={() => speak({text: "option 1 Retail Banking.  option 2 Private Banking.  option 3 Loans."})} >Voice Navigation</button>
             <Recommender option1="1. Retail Banking" option2="2. Private Banking" option3="3. Loans" />
             </div>
             </div>
