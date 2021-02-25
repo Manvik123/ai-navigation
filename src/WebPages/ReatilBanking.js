@@ -1,9 +1,30 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import Card3 from '../components/Card3'
 import{Nav} from 'react-bootstrap'
 import Recommender from '../components/Recommender'
+import { useSpeechSynthesis } from 'react-speech-kit';
+import Speech from '../components/Speech'
+import SpeechRecognition, {
+    useSpeechRecognition,
+    } from "react-speech-recognition";
+  
+
 function ReatailBanking(){
-    return(
+    const { speak } = useSpeechSynthesis();
+    useEffect(() => {
+        
+        SpeakText();
+
+     }, []);
+     const SpeakText=()=>{
+        
+        speak({text: "Please Select an option . option 1 Money Transfer.  option 2 Check Balance.  option 3 SMS Service."})
+       // SpeechRecognition.startListening
+     }
+
+     
+    
+     return(
         <div>
             <br />
             <br />
@@ -43,7 +64,7 @@ function ReatailBanking(){
             </div>
             <div className="col-md-2"></div>
             </div>
-        
+            <Speech op1="/moneyTransfer" op2="/checkBalance" op3="/" />
        </div>
     )
 

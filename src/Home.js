@@ -9,6 +9,7 @@ import ModalF from './components/Modal'
 import Home1 from "./assets/Home1.jpg";
 import Card4 from "./components/Card4";
 import { useSpeechSynthesis } from 'react-speech-kit';
+import Speech from './components/Speech'
 
 
 function Home(){
@@ -36,10 +37,12 @@ function Home(){
             < br />
             <br />
             <button type="button" class="btn btn-info float-center" onClick={() => speak({text: "option 1 Retail Banking.  option 2 Private Banking.  option 3 Loans."})} >Voice Navigation</button>
+            <Speech op1="/retailBanking" op2="/privateBanking" op3="/loans" />
             <Recommender option1="1. Retail Banking" option2="2. Private Banking" option3="3. Loans" />
             </div>
             </div>
             <ModalF setModalOpen={setModalOpen} modalOpen={modalOpen}/>
+            
     </div>
     ) 
 
