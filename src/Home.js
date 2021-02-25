@@ -16,8 +16,14 @@ function Home(){
     return(
         
         <div className="card-imghome">
-        <div className="row  justify-content-center">
+        <div className="row ">
+            <div className="col-md-9 "></div>
+            <div className="col-md-3">
+            < br />
+            <br />
+            <button type="button" class="btn btn-info float-center">Voice Navigation</button>
             <Recommender option1="1. Retail Bnaking" option2="2. Private Banking" option3="3. Loans" />
+            </div>
             </div>
             <ModalF setModalOpen={setModalOpen} modalOpen={modalOpen}/>
     </div>
