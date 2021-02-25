@@ -3,7 +3,7 @@ import Card3 from '../components/Card3'
 import{Nav} from 'react-bootstrap'
 import Recommender from '../components/Recommender'
 import Speech from '../components/Speech'
-function Transaction(){
+function CheckBalance(){
     return(
         < div >
             <br />
@@ -18,16 +18,15 @@ function Transaction(){
             <Card3  cardCaption="Current Account"/>
             </Nav.Link>
             <br/>
-            <Nav.Link href="/retailBanking/moneyTransfer/savingsAccount">
+            <Nav.Link href="/retailBanking/moneyTransfer/currentAccount">
             <Card3 cardCaption="Savings Account"/>
             </Nav.Link>
             <br/>
             </div>
-            <div className="col-md-2 ">
-            <Speech op1="/retailBanking/moneyTransfer/savingAccount" op2="/retailBanking/moneyTransfer/currentAccount" op3="/" />
+            <div className="col-md-1 ">
             <Recommender option1="1. Savings Account" option2="2. Current Account" />
             </div>
-            <div className="col-md-1"></div>
+            <div className="col-md-2"></div>
             </div>
         
        </div>
@@ -36,4 +35,4 @@ function Transaction(){
 }
 
 
-export default Transaction
+export default CheckBalance

@@ -16,6 +16,7 @@ import RetialBanking from './WebPages/ReatilBanking'
 import Transaction from './WebPages/Transaction'
 import CurrentAccount from './WebPages/CurrentAccount';
 import Modalex from './components/Modal'
+import CheckBalance from './WebPages/CheckBalance'
 import React, { useState } from "react";
 import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 import SpeechRecognition, {
@@ -35,8 +36,10 @@ function App() {
           <br/>
           <BrowserRouter>
           <Switch>
+          <Route  path='/retailBanking/moneyTransfer/savingsAccount' component={CurrentAccount} />
             <Route  path='/retailBanking/moneyTransfer/currentAccount' component={CurrentAccount} />
             <Route path='/modal' component={Modalex} />
+            <Route  path='/retailBanking/checkBalance' component={CheckBalance} />
             <Route  path='/retailBanking/moneyTransfer' component={Transaction} />
             <Route  path='/login/customer' component={Customer} />
             <Route eaxct path='/login' component={Login} />

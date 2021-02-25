@@ -59,12 +59,13 @@ function ReatailBanking(){
             <br/>
             </div>
             
-            <div className="col-md-1 ">
+            <div className="col-md-2 ">
+            <Speech op1="/retailBanking/moneyTransfer" op2="/checkBalance" op3="/" />
             <Recommender option1="1. Money Transfer" option2="2. Check Balance" option3="3. SMS Service"/>
             </div>
-            <div className="col-md-2"></div>
+            <div className="col-md-1"></div>
             </div>
-            <Speech op1="/moneyTransfer" op2="/checkBalance" op3="/" />
+            
        </div>
     )
 

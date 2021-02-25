@@ -5,17 +5,15 @@ import Recommender from '../components/Recommender'
 function CurrentAccount(){
     return(
         < div >
+            <div >
             <br />
             <br />
-            <h4 >Select Beneficiary</h4>
-            <br />
-            <Card3  cardCaption="Option 1"/>
-            <br/>
-            <Card3 cardCaption="Option 2"/>
-            <br/>
-            <Card3 cardCaption="Option 3"/>
-            <br/>
-           
+            <div className="row justify-content-center" >
+            <h3> Submit Details</h3>
+               
+            </div>
+        
+       </div>
         
        </div>
     )

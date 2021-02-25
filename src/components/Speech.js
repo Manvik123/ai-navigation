@@ -18,7 +18,7 @@ function Speech(props){
       const { transcript } = useSpeechRecognition({ commands });
       const [redirectUrl, setRedirectUrl] = useState("");
     
-      const pages = ["home","login","dashboard","aboutUs","private Banking","advantage Banking","loans","investment","one","two","three"];
+      const pages = ["home","login","dashboard","aboutUs","private Banking","advantage Banking","loans","investment","one","two","three","2","3"];
       const urls = {
         // home: "/",
         // login: "/login",
@@ -29,8 +29,8 @@ function Speech(props){
         loans: "/loans",
         investment: "/investment",
         one: props.op1,
-        two: props.op2,
-        three: props.op3
+        2: props.op2,
+        3: props.op3
       }
     
       // if (!SpeechRecognition.browserSupportSpeechRecognition()) {
@@ -48,17 +48,16 @@ function Speech(props){
         }
       }
     return(
-        
+    
         <div style={{textAlign:'center', backgroundColor:"blueGray"}}>
-        <p style={{textAlign:'center', fontStyle:'normal', fontSize:'20px'}} id="transcipt">Transcript: {transcript}</p>
-        <br/>
+        <p style={{textAlign:'center', fontStyle:'normal', fontSize:'20px'}} id="transcipt"> {transcript}</p>
         <button style={{border:'0px solid #ffffff',textShadow:'0px -1px 1px #222222',boxShadow:'2px 2px 5px #000000',borderRadius:'10px 10px 10px 10px', 
-        backgroundColor:"gray[100]", color:"black",paddingLeft:'15px',paddingRight:'15px'}} onClick={SpeechRecognition.startListening}>    Start    </button>
-        <br/>
+        backgroundColor:"gray[100]", color:"black",paddingLeft:'15px',paddingRight:'15px'}} onClick={SpeechRecognition.startListening}> Speak to Navigate</button>
         <BrowserRouter>
         {redirect}
         </BrowserRouter>
         </div>
+        
     )
 }
 export default Speech
