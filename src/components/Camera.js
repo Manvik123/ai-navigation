@@ -1,8 +1,13 @@
 import React from 'react'
 import Webcam from 'react-webcam'
 import axios from 'axios'
+import { BrowserRouter, Route, Switch, Redirect, useHistory } from "react-router-dom";
+import history from './History'
+import ModalF from '../components/Modal'
 
- class Camera extends React.Component {
+class Camera extends React.Component {
+
+    
      constructor(props){
          super(props);
          {this.state = {webcamEnabled: true};
@@ -12,7 +17,10 @@ import axios from 'axios'
          imageData: null,
          image_name: "",
          saveImage: false
+        
     }
+    
+
     setRef = (webcam) => {
         this.webcam = webcam;
     }
@@ -27,7 +35,7 @@ import axios from 'axios'
         this.setState({
             imageData : imageSrc
         })
-        this.setState({webcamEnabled: false});
+        //this.setState({webcamEnabled: false});
          //e.persist();
          this.setState((previousState) => {
              return{
@@ -36,13 +44,20 @@ import axios from 'axios'
          });
          console.log(this.state.imageData)
          axios
-         .post('https://jsonplaceholder.typicode.com/posts',this.state.imageData)
-        .then(response => {
-            console.log(response)
+         .post('https://hack-neurons.et.r.appspot.com/read-gesture',this.state.imageData)
+        .then(
+            response => {
+                console.log(response)
+                console.log(this.props)
+               // history.push('/retailBanking/fundTransfer/confirmation')
+               // window.location.reload()
+               
+            
         })
          .catch(error=> {
              console.log(error)
-         })
+         });
+         
      }
 
      handleChange = (e) => {
@@ -71,7 +86,9 @@ import axios from 'axios'
           };
 
     return(
-      <div>
+      <div className="row"> 
+          
+          <div className="col-md-12">
           {this.state.webcamEnabled ? (
           <Webcam
           audio={false}
@@ -84,9 +101,11 @@ import axios from 'axios'
           />):null }
 
           <div style={{alignContent: 'flex-start'}}>
-            <button style={{border:'0px solid #ffffff',textShadow:'0px -1px 1px #222222',boxShadow:'2px 2px 5px #000000',borderRadius:'10px 10px 10px 10px', 
-        backgroundColor:"gray[100]", color:"black",paddingLeft:'15px',paddingRight:'15px'}}  onClick={()=>this.onClickSave()}>Capture photo</button>  
+            <button class="btn btn-info float-center" onClick={()=>this.onClickSave()}>Capture Gesture</button>  
+            
           </div>
+          </div>
+          
       </div>
     );
   }
@@ -94,5 +113,6 @@ import axios from 'axios'
 export default Camera;
 
 //<p><img src={this.state.imageData} alt="" /></p>
+//https://jsonplaceholder.typicode.com/posts
 //<span><button onClick={()=>this.onClickSave()}>Save</button></span>
-
+//https://hack-neurons.et.r.appspot.com/read-gesture

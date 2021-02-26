@@ -28,30 +28,32 @@ function Home(){
         
         <div className="card-imghome">
         <div className="row ">
-            <div className="col-md-8 ">
+            <div className="col-md-7 ">
             <div class="row">
                 <Card4 imgsrc={Home1} 
                  />
              </div >   
-            <div className ="col-md-1">
-                <Camera />
+           
             </div>
+            <div className = "col-md-2">
+
             </div>
             <div className="col-md-3" style={{textAlign:'center'}}>
             <br />
             
-            <button type="button" class="btn btn-info float-center" onClick={() => speak({text: "option 1 Retail Banking.  option 2 Private Banking.  option 3 Loans."})} >Voice Navigation</button>
-            <Speech op1="/retailBanking" op2="/privateBanking" op3="/loans" />
-            <Recommender option1="1. Retail Banking" option2="2. Private Banking" option3="3. Loans" />
+            <button type="button" class="btn btn-info float-center" onClick={() => speak({text: "Please select an option. option 1 Check Balance.  option 2 Fund transfer.  option 3 Pay Bills . option 4 create an investment."})} >Voice Navigation</button>
+            <Speech op1="/retailBanking/CheckBalance" op2="/retailBanking/fundTransfer" op3="/loans" />
+            <Recommender option1="1. Check Balance" option2="2. Fund transfer" option3="3. Pay Bills" option4= "4. Create an investment" />
             
             </div>
-            </div>
-            <ModalF setModalOpen={setModalOpen} modalOpen={modalOpen}/>
+           
             
+            </div>
+                
     </div>
     ) 
 
     
 }  
 export default Home
-
+//<ModalF setModalOpen={setModalOpen} modalOpen={modalOpen}/>

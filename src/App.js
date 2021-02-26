@@ -14,11 +14,14 @@ import Investment from './WebPages/Investment'
 import Loans from './WebPages/Loans'
 import RetialBanking from './WebPages/ReatilBanking'
 import Transaction from './WebPages/Transaction'
-import CurrentAccount from './WebPages/CurrentAccount';
+import SubmitDetails from './WebPages/SubmitDetails';
 import Modalex from './components/Modal'
 import CheckBalance from './WebPages/CheckBalance'
 import React, { useState } from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { Router, Route, Switch, Redirect } from "react-router-dom";
+import history from './components/History';
+import FundTransfer from './WebPages/FundTransfer'
+import Confirmation from './WebPages/Confirmation'
 import SpeechRecognition, {
   useSpeechRecognition,
   } from "react-speech-recognition";
@@ -34,12 +37,14 @@ function App() {
           <Navbar />
           <br/>
           <br/>
-          <BrowserRouter>
+          <Router  history={history}>
           <Switch>
-          <Route  path='/retailBanking/moneyTransfer/savingsAccount' component={CurrentAccount} />
-            <Route  path='/retailBanking/moneyTransfer/currentAccount' component={CurrentAccount} />
+          <Route  path='/retailBanking/moneyTransfer/savingsAccount' component={SubmitDetails} />
+            <Route  path='/retailBanking/moneyTransfer/currentAccount' component={SubmitDetails} />
+            <Route  path='/retailBanking/fundTransfer/confirmation' component={Confirmation} />
             <Route path='/modal' component={Modalex} />
-            <Route  path='/retailBanking/checkBalance' component={CheckBalance} />
+            <Route  path='/retailBanking/CheckBalance' component={SubmitDetails} />
+            <Route  path='/retailBanking/fundTransfer' component={FundTransfer} />
             <Route  path='/retailBanking/moneyTransfer' component={Transaction} />
             <Route  path='/login/customer' component={Customer} />
             <Route eaxct path='/login' component={Login} />
@@ -49,10 +54,11 @@ function App() {
             <Route  path='/investment' component={Investment} />
             <Route  path='/loans' component={Loans} />
             <Route  path='/retailBanking' component={RetialBanking} />
+          
             <Route exact path='/' component={Home} />
           </Switch>
           
-          </BrowserRouter>
+          </Router>
 
           
         </div>

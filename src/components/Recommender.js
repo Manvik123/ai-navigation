@@ -8,7 +8,7 @@ function Recommender(props){
                 <p>{props.option1}</p>
                 <p>{props.option2}</p>
                 <p>{props.option3}</p>
-
+                <p>{props.option4}</p>
                     
                 </div>
             </div> 

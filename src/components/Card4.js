@@ -5,7 +5,7 @@ function Card4(props){
     return(
  <div class="container" >    
   <div class="row align-middle">
-    <div class="col-md-6 col-lg-9 column">
+    <div class="col-md-6 col-lg-12 column">
       <div class="card "><img  class="img" src={props.imgsrc}/>
         
         

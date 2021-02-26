@@ -43,16 +43,16 @@ function Speech(props){
         if (pages.includes(redirectUrl)) {
           //redirect = <Redirect to={urls[redirectUrl]}/>;
           history.replace(urls[redirectUrl])
+          window.location.reload()
         } else {
           window.alert("Could not recognize");
         }
       }
     return(
     
-        <div style={{textAlign:'center', backgroundColor:"blueGray"}}>
+        <div >
         <p style={{textAlign:'center', fontStyle:'normal', fontSize:'20px'}} id="transcipt"> {transcript}</p>
-        <button style={{border:'0px solid #ffffff',textShadow:'0px -1px 1px #222222',boxShadow:'2px 2px 5px #000000',borderRadius:'10px 10px 10px 10px', 
-        backgroundColor:"gray[100]", color:"black",paddingLeft:'15px',paddingRight:'15px'}} onClick={SpeechRecognition.startListening}> Speak to Navigate</button>
+        <button class="btn btn-info float-center" onClick={SpeechRecognition.startListening}> Speak to Navigate</button>
         <BrowserRouter>
         {redirect}
         </BrowserRouter>
