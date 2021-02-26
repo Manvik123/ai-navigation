@@ -35,22 +35,25 @@ class Camera extends React.Component {
         this.setState({
             imageData : imageSrc
         })
-        //this.setState({webcamEnabled: false});
+        
+        this.setState({webcamEnabled: false})
          //e.persist();
          this.setState((previousState) => {
              return{
                  saveImage : !previousState.saveImage
              }
-         });
+         })
+
+         
          console.log(this.state.imageData)
          axios
-         .post('https://hack-neurons.et.r.appspot.com/read-gesture',this.state.imageData)
+         .post('https://jsonplaceholder.typicode.com/posts',{"gesture":this.state.imageData})
         .then(
             response => {
                 console.log(response)
                 console.log(this.props)
-               // history.push('/retailBanking/fundTransfer/confirmation')
-               // window.location.reload()
+               history.push('/retailBanking/fundTransfer/confirmation')
+              window.location.reload()
                
             
         })
@@ -102,7 +105,6 @@ class Camera extends React.Component {
 
           <div style={{alignContent: 'flex-start'}}>
             <button class="btn btn-info float-center" onClick={()=>this.onClickSave()}>Capture Gesture</button>  
-            
           </div>
           </div>
           

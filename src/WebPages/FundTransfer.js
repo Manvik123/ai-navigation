@@ -3,7 +3,7 @@ import Card3 from '../components/Card3'
 import{Nav, Form , Button} from 'react-bootstrap'
 import Recommender from '../components/Recommender'
 import Camera from '../components/Camera'
-import Webcam from 'react-webcam'
+import Webcam from 'react-webcam' 
 
 function FundTransfer () {
    
@@ -42,7 +42,7 @@ function FundTransfer () {
 <div className="col-md-3">
 <Camera />
 </div>
-<div className="col-md-1"></div>
+
     </div>
      
     </div>

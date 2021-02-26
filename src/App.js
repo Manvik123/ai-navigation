@@ -22,6 +22,7 @@ import { Router, Route, Switch, Redirect } from "react-router-dom";
 import history from './components/History';
 import FundTransfer from './WebPages/FundTransfer'
 import Confirmation from './WebPages/Confirmation'
+import Balance from './WebPages/Balance'
 import SpeechRecognition, {
   useSpeechRecognition,
   } from "react-speech-recognition";
@@ -39,6 +40,7 @@ function App() {
           <br/>
           <Router  history={history}>
           <Switch>
+          <Route  path='/retailBanking/CheckBalance/Balance' component={Balance} />
           <Route  path='/retailBanking/moneyTransfer/savingsAccount' component={SubmitDetails} />
             <Route  path='/retailBanking/moneyTransfer/currentAccount' component={SubmitDetails} />
             <Route  path='/retailBanking/fundTransfer/confirmation' component={Confirmation} />
@@ -54,7 +56,7 @@ function App() {
             <Route  path='/investment' component={Investment} />
             <Route  path='/loans' component={Loans} />
             <Route  path='/retailBanking' component={RetialBanking} />
-          
+            
             <Route exact path='/' component={Home} />
           </Switch>
           
