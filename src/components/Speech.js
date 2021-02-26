@@ -29,8 +29,8 @@ function Speech(props){
         loans: "/loans",
         investment: "/investment",
         one: props.op1,
-        2: props.op2,
-        3: props.op3
+        2 : props.op2,
+        3 : props.op3
       }
     
       // if (!SpeechRecognition.browserSupportSpeechRecognition()) {

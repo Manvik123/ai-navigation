@@ -10,6 +10,7 @@ import Home1 from "./assets/Home1.jpg";
 import Card4 from "./components/Card4";
 import { useSpeechSynthesis } from 'react-speech-kit';
 import Speech from './components/Speech'
+import Camera from './components/Camera'
 
 
 function Home(){
@@ -27,18 +28,22 @@ function Home(){
         
         <div className="card-imghome">
         <div className="row ">
-            <div className="col-md-9 ">
+            <div className="col-md-8 ">
             <div class="row">
                 <Card4 imgsrc={Home1} 
                  />
+             </div >   
+            <div className ="col-md-1">
+                <Camera />
             </div>
             </div>
             <div className="col-md-3" style={{textAlign:'center'}}>
             <br />
+            
             <button type="button" class="btn btn-info float-center" onClick={() => speak({text: "option 1 Retail Banking.  option 2 Private Banking.  option 3 Loans."})} >Voice Navigation</button>
             <Speech op1="/retailBanking" op2="/privateBanking" op3="/loans" />
             <Recommender option1="1. Retail Banking" option2="2. Private Banking" option3="3. Loans" />
-            <br />
+            
             </div>
             </div>
             <ModalF setModalOpen={setModalOpen} modalOpen={modalOpen}/>
